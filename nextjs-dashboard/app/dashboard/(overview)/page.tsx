@@ -5,6 +5,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { LatestInvoicesSkeleton, RevenueChartSkeleton, CardsSkeleton } from '@/app/ui/skeletons';
 import CardWrapper from '@/app/ui/dashboard/cards';
+import Bar from '@/app/ui/dashboard/horizontalchart';
  
 
 export default async function Page() {
@@ -20,6 +21,9 @@ export default async function Page() {
           <CardWrapper />
         </Suspense>
 
+      </div>
+      <div>
+        <Bar />
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         <Suspense fallback={<RevenueChartSkeleton />}>
